@@ -1,0 +1,194 @@
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+p, a {
+    color: var(--dark-grayish-blue);
+    line-height: 2em;
+}
+
+:root {
+    font-size: 15px;
+    --soft-orange: hsl(35, 77%, 62%);
+    --soft-red: hsl(5, 85%, 63%);
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --very-dark-blue: hsl(240, 100%, 5%)
+}
+
+.container {
+    padding: 5em 10% 10em;
+    background-color: var(--off-white);
+}
+
+.desktop-nav {
+    margin-bottom: 4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.desktop-nav__logo {
+    width: 5em;
+    aspect-ratio: 13/8;
+    background-position: center;
+    background-size: cover;
+    background-image: url(assets/images/logo.svg);
+}
+
+.dsktp-item-container__item {
+    margin-left: 4em;
+    text-decoration: none;
+}
+
+.dsktp-item-container__item:hover {
+    color: var(--soft-red);
+    cursor: pointer;
+}
+
+.master-container {
+    display: grid;
+    grid-template-columns: calc(70% - 1.25em) calc(30% - 1.25em);
+    grid-gap: 2.5em;
+    margin-bottom: 6em;
+}
+
+.main-container {
+    display: grid;
+    grid-template-areas: "head head"
+                         "title description";
+    grid-template-rows: 25em 2fr;
+    grid-template-columns: 50% 50%;
+}
+
+.main-container__img {
+    grid-area: head;
+    aspect-ratio: 73/30;
+    background-position: center;
+    background-size: cover;
+    background-image: url(assets/images/image-web-3-desktop.jpg);
+}
+
+.main-container__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.main-container__title {
+    margin-right: 2em;
+    margin-bottom: 0;
+    font-weight: 900;
+    grid-area: title;
+    font-size: 4em;
+}
+
+.main-container__description {
+    grid-area: description;
+    margin: 2.5em auto;
+}
+
+.main-container__cta {
+    font-weight: 700;
+    letter-spacing: 4px;
+    padding: 0 2.5em;
+    margin-top: auto;
+    color: white;
+    border: none;
+    outline: none;
+    background-color: var(--soft-red);
+    line-height: 3.5em;
+    transition: background-color .2s ease;
+}
+
+.main-container__cta:hover {
+    cursor: pointer;
+    background-color: var(--very-dark-blue);
+}
+
+.aside-container {
+    background-color: var(--very-dark-blue);
+    padding: 2em;
+}
+
+.aside-container__title {
+    margin-top: 0;
+    color: var(--soft-orange);
+    font-size: 3.5em;
+}
+
+.new-story-container > hr {
+    margin: 2.5em 0;
+    border: 1px solid var(--dark-grayish-blue);
+}
+
+.new-story-container:last-child > hr {
+    display: none;
+}
+
+.new-story-container__title {
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.new-story-container__title:hover {
+    color: var(--soft-orange);
+    cursor: pointer;
+}
+
+.new-story-container__description {
+    color: var(--grayish-blue);
+}
+
+.articles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3em;
+}
+
+.articles-container__article {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 2em;
+}
+
+.article__count {
+    line-height: 1em;
+    color: var(--grayish-blue);
+    font-weight: 800;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.article__title {
+    font-weight: 900;
+    font-size: 1.5em;
+}
+
+.article__title:hover {
+    cursor: pointer;
+    color: var(--soft-red);
+}
+
+.article__img {
+    width: 10em;
+    aspect-ratio: 100/127;
+    background-position: center;
+    background-size: cover;
+}
+
+.article__img--retro {
+    background-image: url(assets/images/image-retro-pcs.jpg);
+}
+
+.article__img--laptop {
+    background-image: url(assets/images/image-top-laptops.jpg);
+}
+
+.article__img--growth {
+    background-image: url(assets/images/image-gaming-growth.jpg);
+}
